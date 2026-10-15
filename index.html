@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ApexByte Systems & IT Solutions | High-Performance Hardware & Precision Repair</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-on-surface": "#eaf1ff",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#d3e4fe",
+            "surface-container": "#e5eeff",
+            "tertiary-fixed": "#acedff",
+            "outline": "#76777d",
+            "primary-container": "#131b2e",
+            "tertiary-container": "#001f26",
+            "primary-fixed": "#dae2fd",
+            "on-error-container": "#93000a",
+            "on-surface": "#0b1c30",
+            "secondary-fixed-dim": "#b4c5ff",
+            "tertiary-fixed-dim": "#4cd7f6",
+            "on-tertiary-container": "#0090a9",
+            "secondary-container": "#316bf3",
+            "inverse-surface": "#213145",
+            "background": "#f8f9ff",
+            "on-secondary-fixed": "#00174b",
+            "on-primary-container": "#7c839b",
+            "surface-tint": "#565e74",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#001f26",
+            "surface-variant": "#d3e4fe",
+            "on-tertiary-fixed-variant": "#004e5c",
+            "surface-container-lowest": "#ffffff",
+            "secondary": "#0051d5",
+            "outline-variant": "#c6c6cd",
+            "error-container": "#ffdad6",
+            "secondary-fixed": "#dbe1ff",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#3f465c",
+            "primary-fixed-dim": "#bec6e0",
+            "on-secondary-fixed-variant": "#003ea8",
+            "primary": "#000000",
+            "inverse-primary": "#bec6e0",
+            "on-primary-fixed": "#131b2e",
+            "tertiary": "#000000",
+            "surface-container-low": "#eff4ff",
+            "surface-dim": "#cbdbf5",
+            "on-tertiary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#45464d",
+            "on-secondary-container": "#fefcff",
+            "surface": "#f8f9ff",
+            "on-background": "#0b1c30",
+            "surface-bright": "#f8f9ff",
+            "surface-container-high": "#dce9ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-lg": "3rem",
+            "gutter-sm": "1rem",
+            "gutter": "1.5rem",
+            "gutter-lg": "2rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "margin-sm": "1rem"
+          },
+          "fontFamily": {
+            "code-metric": ["JetBrains Mono"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"],
+            "body-lg": ["Inter"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "body-sm": ["Inter"],
+            "label-caps": ["JetBrains Mono"],
+            "headline-xl": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "code-metric": ["14px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #c6c6cd;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Emergency Notification Banner -->
+<div class="bg-primary-container text-surface-container-lowest px-margin py-2 text-center text-body-sm font-body-sm flex flex-wrap items-center justify-center gap-3 border-b border-outline">
+<div class="inline-flex items-center gap-1.5 font-code-metric text-label-caps text-tertiary-fixed bg-surface-container-highest/20 px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed" data-icon="bolt">bolt</span>
+<span>PRIORITY TRIAGE ACTIVE</span>
+</div>
+<span class="font-medium text-surface-container-lowest">Same-day diagnostics available | Call 24/7 Hotline: <a class="underline font-bold hover:text-tertiary-fixed transition-colors" href="tel:8005552983">(800) 555-BYTE</a> | Free 15-minute bench inspection</span>
+<span class="hidden md:inline-block w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span class="hidden md:inline text-on-primary-container">ISO 9001 & CompTIA Master Facility</span>
+</div>
+<!-- Shared Component: TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<div class="w-full max-w-[1360px] mx-auto px-margin md:px-margin-lg flex items-center justify-between h-20">
+<!-- Logo Anchor -->
+<a class="flex items-center gap-3 group" href="#">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm border border-outline">
+<span class="material-symbols-outlined text-[24px] text-tertiary-fixed" data-icon="memory">memory</span>
+</div>
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm font-bold tracking-tight text-on-surface dark:text-inverse-on-surface leading-tight">ApexByte Systems & IT Solutions</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant text-[10px]">CERTIFIED BENCH & SYSTEMS LAB</span>
+</div>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden lg:flex items-center space-x-6">
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-150 px-2 py-1 rounded" href="#sales">Hardware Sales</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-150 px-2 py-1 rounded" href="#custom-rigs">Custom Rigs</a>
+<a class="text-secondary dark:text-secondary-fixed font-semibold border-b-2 border-secondary pb-1" href="#repairs">Repairs & Diagnostics</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-150 px-2 py-1 rounded" href="#enterprise">Enterprise SLA</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-150 px-2 py-1 rounded" href="#reviews">Reviews</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-150 px-2 py-1 rounded" href="#contact">Contact</a>
+</nav>
+<!-- Trailing Action Cluster -->
+<div class="flex items-center gap-3">
+<!-- Search bar on right -->
+<div class="hidden xl:flex items-center bg-surface-container-low rounded-lg px-3 py-1.5 border border-outline-variant focus-within:border-secondary focus-within:ring-2 focus-within:ring-secondary-fixed transition-all">
+<span class="material-symbols-outlined text-[18px] text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none text-body-sm font-body-sm text-on-surface focus:outline-none focus:ring-0 w-36 px-2" placeholder="Lookup Ticket / Spec..." type="text"/>
+</div>
+<button aria-label="Shopping Cart" class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors duration-150 relative">
+<span class="material-symbols-outlined text-[22px]" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary"></span>
+</button>
+<a class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-body-sm font-body-sm font-semibold text-error bg-error-container/50 border border-error-container rounded-lg hover:bg-error-container transition-all active:scale-[0.98]" href="tel:8005552983">
+<span class="material-symbols-outlined text-[18px]" data-icon="call">call</span>
+<span>Emergency Hotline</span>
+</a>
+<a class="bg-secondary hover:bg-secondary-container text-on-primary px-4 py-2 rounded-lg text-body-md font-body-md font-semibold shadow-sm transition-all active:scale-[0.98] inline-flex items-center gap-2" href="#diagnostic-card">
+<span class="material-symbols-outlined text-[18px]" data-icon="build">build</span>
+<span>Book Free Diagnosis</span>
+</a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section with Integrated Interactive Triage Card -->
+<section class="relative bg-gradient-to-b from-surface-container-low via-background to-surface pt-10 pb-16 border-b border-outline-variant overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(#c6c6cd_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
+<div class="w-full max-w-[1360px] mx-auto px-margin md:px-margin-lg relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<!-- Left Column: Copy & Social Proof -->
+<div class="lg:col-span-7 flex flex-col justify-center pt-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full border border-secondary/20 mb-6 w-fit">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-code-metric text-label-caps text-secondary font-semibold uppercase tracking-wider">Certified Hardware Engineers On Duty</span>
+</div>
+<h1 class="text-display-hero-mobile md:text-display-hero font-display-hero font-extrabold text-on-surface tracking-tight leading-tight mb-6">
+              High-Performance Rigs & <span class="text-secondary underline decoration-secondary-fixed decoration-4">Precision Hardware</span> Maintenance
+            </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-8 max-w-2xl leading-relaxed">
+              New & certified refurbished enterprise-grade PCs and laptops engineered for zero downtime. Paired with master-level component micro-soldering, cleanroom data recovery, and thermal overhaul.
+            </p>
+<div class="flex flex-wrap items-center gap-4 mb-10">
+<a class="bg-secondary hover:bg-secondary-container text-on-primary px-6 py-3.5 rounded-lg text-body-lg font-body-lg font-semibold shadow-md inline-flex items-center gap-2 active:scale-[0.98] transition-all" href="#sales">
+<span>Explore PC Catalog</span>
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="bg-surface-container-lowest border border-outline-variant text-on-surface hover:bg-surface-container-low px-6 py-3.5 rounded-lg text-body-lg font-body-lg font-semibold inline-flex items-center gap-2 active:scale-[0.98] transition-all" href="#diagnostic-card">
+<span class="material-symbols-outlined text-[20px] text-secondary" data-icon="medical_services">medical_services</span>
+<span>Schedule a Repair</span>
+</a>
+</div>
+<!-- Social Proof 4-Badge Cluster -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-outline-variant">
+<div class="p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/70 shadow-sm">
+<div class="font-code-metric text-headline-sm font-bold text-secondary">15,000+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant font-medium">Rigs Restored</div>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/70 shadow-sm">
+<div class="flex items-center gap-1 text-on-surface font-headline-sm font-bold text-headline-sm">
+<span>CompTIA</span>
+<span class="text-label-caps text-secondary font-bold">A+</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant font-medium">Master Engineers</div>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/70 shadow-sm">
+<div class="font-code-metric text-headline-sm font-bold text-on-surface">365 Days</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant font-medium">Parts & Labor SLA</div>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/70 shadow-sm">
+<div class="flex items-center text-amber-500 font-headline-sm font-bold text-headline-sm">
+<span class="material-symbols-outlined text-[20px] text-amber-500" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-on-surface ml-1">4.9 / 5</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant font-medium">1,200+ Reviews</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Quick Diagnostic Request Card -->
+<div class="lg:col-span-5 w-full" id="diagnostic-card">
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 shadow-xl relative">
+<div class="flex items-center justify-between pb-4 mb-5 border-b border-outline-variant">
+<div>
+<span class="text-label-caps font-label-caps text-secondary font-bold block mb-1">LIVE BENCH INTAKE</span>
+<h3 class="text-headline-md font-headline-md font-bold text-on-surface">Quick Diagnostic Triage</h3>
+</div>
+<span class="px-2.5 py-1 bg-surface-container text-secondary text-label-caps font-label-caps font-semibold rounded border border-secondary/20">NO COMMITMENT</span>
+</div>
+<form class="space-y-4" onsubmit="event.preventDefault(); document.getElementById('intake-confirmation').classList.remove('hidden');">
+<!-- Device Selector -->
+<div>
+<label class="block text-body-sm font-body-sm font-semibold text-on-surface mb-2">1. Select Device Architecture:</label>
+<div class="grid grid-cols-2 gap-2" id="device-options">
+<button class="device-btn active-opt p-2.5 rounded-lg border border-secondary bg-surface-container-low text-left flex items-center gap-2 transition-all" onclick="selectOption(this, 'device')" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary" data-icon="desktop_windows">desktop_windows</span>
+<span class="text-body-sm font-medium">Desktop PC</span>
+</button>
+<button class="device-btn p-2.5 rounded-lg border border-outline-variant hover:border-secondary text-left flex items-center gap-2 transition-all" onclick="selectOption(this, 'device')" type="button">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant" data-icon="sports_esports">sports_esports</span>
+<span class="text-body-sm font-medium">Custom Gaming Rig</span>
+</button>
+<button class="device-btn p-2.5 rounded-lg border border-outline-variant hover:border-secondary text-left flex items-center gap-2 transition-all" onclick="selectOption(this, 'device')" type="button">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant" data-icon="laptop_chromebook">laptop_chromebook</span>
+<span class="text-body-sm font-medium">Laptop / Ultrabook</span>
+</button>
+<button class="device-btn p-2.5 rounded-lg border border-outline-variant hover:border-secondary text-left flex items-center gap-2 transition-all" onclick="selectOption(this, 'device')" type="button">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant" data-icon="computer">computer</span>
+<span class="text-body-sm font-medium">Apple Mac / Workstation</span>
+</button>
+</div>
+</div>
+<!-- Primary Symptom Selector -->
+<div>
+<label class="block text-body-sm font-body-sm font-semibold text-on-surface mb-2">2. Primary Symptom / Hardware Fault:</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2" id="issue-options">
+<button class="issue-btn active-opt p-2 rounded-lg border border-secondary bg-surface-container-low text-left flex items-center gap-2 text-body-sm font-medium transition-all" onclick="selectOption(this, 'issue')" type="button">
+<span class="material-symbols-outlined text-[18px] text-error" data-icon="power_off">power_off</span>
+<span>No Power / Boot Loop</span>
+</button>
+<button class="issue-btn p-2 rounded-lg border border-outline-variant hover:border-secondary text-left flex items-center gap-2 text-body-sm font-medium transition-all" onclick="selectOption(this, 'issue')" type="button">
+<span class="material-symbols-outlined text-[18px] text-amber-500" data-icon="mode_heat">mode_heat</span>
+<span>Overheating / Throttling</span>
+</button>
+<button class="issue-btn p-2 rounded-lg border border-outline-variant hover:border-secondary text-left flex items-center gap-2 text-body-sm font-medium transition-all" onclick="selectOption(this, 'issue')" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="broken_image">broken_image</span>
+<span>Screen / Physical Damage</span>
+</button>
+<button class="issue-btn p-2 rounded-lg border border-outline-variant hover:border-secondary text-left flex items-center gap-2 text-body-sm font-medium transition-all" onclick="selectOption(this, 'issue')" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline" data-icon="lock_reset">lock_reset</span>
+<span>Virus / OS / Data Recovery</span>
+</button>
+</div>
+</div>
+<!-- Contact & Serial Input -->
+<div class="space-y-3 pt-2">
+<div>
+<label class="block text-body-sm font-body-sm font-medium text-on-surface-variant mb-1">Serial / IMEI / Model (Optional for lookup):</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-3 py-2 text-code-metric font-code-metric text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary" placeholder="e.g., SN-AX992019 or Rog Zephyrus G16" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-3 py-2 text-body-sm font-body-sm text-on-surface focus:outline-none focus:border-secondary" placeholder="Your Full Name" required="" type="text"/>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-3 py-2 text-body-sm font-body-sm text-on-surface focus:outline-none focus:border-secondary" placeholder="Phone / WhatsApp" required="" type="tel"/>
+</div>
+</div>
+<!-- Bench SLA Telemetry indicator -->
+<div class="p-3 bg-surface-container rounded-lg border border-secondary-fixed flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="timer">timer</span>
+<span class="text-body-sm font-body-sm text-on-surface font-medium">Estimated Diagnostic Turnaround:</span>
+</div>
+<span class="font-code-metric text-label-caps font-bold text-secondary">30 - 90 MINS</span>
+</div>
+<button class="w-full bg-secondary hover:bg-secondary-container text-on-primary py-3 rounded-lg text-body-md font-body-md font-bold shadow-md active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[20px]" data-icon="send">send</span>
+<span>Confirm Zero-Cost Diagnostic Ticket</span>
+</button>
+</form>
+<!-- Confirmation feedback modal simulator -->
+<div class="hidden absolute inset-0 bg-surface-container-lowest/95 rounded-xl p-6 flex flex-col items-center justify-center text-center z-20" id="intake-confirmation">
+<span class="material-symbols-outlined text-4xl text-secondary mb-2" data-icon="check_circle">check_circle</span>
+<h4 class="text-headline-md font-headline-md font-bold text-on-surface mb-1">Ticket #APX-8492 Generated</h4>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4">Our cleanroom technician is assigned. Drop your unit in-store or expect a dispatch call within 12 minutes.</p>
+<button class="px-4 py-2 bg-secondary text-on-primary text-body-sm font-semibold rounded-lg" onclick="document.getElementById('intake-confirmation').classList.add('hidden')">Done / New Intake</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sales Highlights Section ('Featured Systems & Components') -->
+<section class="py-16 bg-surface-container-low border-b border-outline-variant" id="sales">
+<div class="w-full max-w-[1360px] mx-auto px-margin md:px-margin-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span>
+<span class="font-code-metric text-label-caps text-secondary font-bold uppercase">STOREFRONT & HARDWARE DEPOT</span>
+</div>
+<h2 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface font-bold tracking-tight">
+              Featured Systems & Certified Hardware
+            </h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-md mt-3 md:mt-0">
+            Every custom build is burn-in tested for 24 hours. Certified pre-owned hardware passes our proprietary 100-point motherboard and thermal audit.
+          </p>
+</div>
+<!-- Bento Grid: 3 Flagship Products -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-lg">
+<!-- Product 1: Pro Gaming Rig -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant hover:border-secondary p-6 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="bg-surface-container text-secondary text-label-caps font-label-caps font-bold px-2.5 py-1 rounded border border-secondary/20">FLAGSHIP LIQUID RIG</span>
+<span class="font-code-metric text-headline-md font-bold text-on-surface">$3,499.00</span>
+</div>
+<div class="relative w-full h-48 rounded-lg overflow-hidden bg-primary-container mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A custom liquid-cooled gaming computer workstation illuminated with subtle white and cobalt blue ambient interior lights. The sleek tempered glass chassis reveals meticulously routed chrome tubing and a high-end RTX graphics card inside an ultra-clean corporate technology lab environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSbOCHdmgaaKhlZjo_9L_JFl9Ll7umwUSjbbmDeuAoeWkOFIwbZ0xeFJnbA-GkzywyYZLpNacGmzp1JBzhzR0RNcZuBnOvY9yZ5vesT4JjGEfdVsVIQwb1PkLr4gJ6yGEOmeAKKz7_RGzxmGWQt9spsWHD0InN9MfNtHDYgVxf5L4mojhDHk3GAl5nlYb1D6aQGjrYjTTB2szzvK-9MzFp5DaUZY9pIh2r7oeCruYnwrI-qnvtWaa8DA"/>
+<span class="absolute top-2 left-2 bg-on-surface/80 backdrop-blur-sm text-surface-container-lowest text-label-caps font-label-caps px-2 py-0.5 rounded">RTX 4080 SUPER</span>
+</div>
+<h3 class="text-headline-md font-headline-md font-bold text-on-surface mb-2">ApexByte Phantom V7 Liquid Extreme</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">Constructed for competitive 4K rendering and high-framerate broadcast simulators with zero thermal drops.</p>
+<!-- Hardware Specs Cluster -->
+<div class="space-y-2 mb-6 font-code-metric text-body-sm">
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">Processor:</span>
+<span class="font-semibold text-on-surface">Intel Core i9-14900K (24-Core)</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">Cooling:</span>
+<span class="font-semibold text-on-surface">360mm Custom Copper Loop</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">Memory & Storage:</span>
+<span class="font-semibold text-on-surface">64GB DDR5-6000 | 2TB Gen4 NVMe</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">Stress Test Pass:</span>
+<span class="text-secondary font-bold">100% Prime95 & FurMark</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-caps font-label-caps text-on-surface-variant">IN STOCK - SAME-DAY DISPATCH</span>
+<button class="bg-secondary hover:bg-secondary-container text-on-primary px-4 py-2 rounded-lg text-body-sm font-semibold active:scale-[0.98] transition-all">
+                Configure & Buy
+              </button>
+</div>
+</div>
+<!-- Product 2: Business Executive Workstation -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant hover:border-secondary p-6 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="bg-surface-container text-on-surface font-label-caps text-label-caps font-bold px-2.5 py-1 rounded border border-outline-variant">ENTERPRISE TIER</span>
+<span class="font-code-metric text-headline-md font-bold text-on-surface">$2,250.00</span>
+</div>
+<div class="relative w-full h-48 rounded-lg overflow-hidden bg-primary-container mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A matte black architectural CAD workstation tower with brushed aluminum accents resting on an executive oak desk. The interior features sound-dampened panels and quiet fan arrays in a bright modern design studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxzeLYgFiJ-4cxnplKYxdK43rgL4PP4A9BQrb5JipjjHrvdAgCs5xpUI57brgaq_yVzn40LSwzkJzugdLX2vJWGdK6dYy7XHLMSA2S8FCPTt3BsDQFLFxyFv6DpNL-Io5NG1nW6_LmM6ExyM1gX1capEKeNKBQMIdlVGX6CM2qblKsnefc3In-w3P5TancnW283Kp5BbpJO7QjtmdTbY9wC3qjyO-mZmFV8qP0TnMNp2RyuRFluYycCw"/>
+<span class="absolute top-2 left-2 bg-on-surface/80 backdrop-blur-sm text-surface-container-lowest text-label-caps font-label-caps px-2 py-0.5 rounded">WHISPER-QUIET 21dB</span>
+</div>
+<h3 class="text-headline-md font-headline-md font-bold text-on-surface mb-2">ApexByte Studio Silent Pro X</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">Sound-dampened chassis designed for architectural firms, video editors, and financial institutions requiring 24/7 reliability.</p>
+<!-- Hardware Specs Cluster -->
+<div class="space-y-2 mb-6 font-code-metric text-body-sm">
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">Processor:</span>
+<span class="font-semibold text-on-surface">AMD Ryzen 9 7900X (12-Core)</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">Acoustics:</span>
+<span class="font-semibold text-on-surface">Noctua NF-A12 Industrial Fans</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">Memory & Storage:</span>
+<span class="font-semibold text-on-surface">64GB ECC DDR5 | Dual 2TB NVMe RAID-1</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">Warranty:</span>
+<span class="text-secondary font-bold">3-Year On-Site ProSupport</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-caps font-label-caps text-on-surface-variant">CUSTOM BUILT TO ORDER</span>
+<button class="bg-surface-container-lowest border border-outline-variant hover:border-secondary text-on-surface px-4 py-2 rounded-lg text-body-sm font-semibold active:scale-[0.98] transition-all">
+                Request Quote
+              </button>
+</div>
+</div>
+<!-- Product 3: Premium Ultrabooks & Certified Refurbished -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant hover:border-secondary p-6 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="bg-surface-container-high text-on-surface text-label-caps font-label-caps font-bold px-2.5 py-1 rounded">GRADE A+ CERTIFIED</span>
+<span class="font-code-metric text-headline-md font-bold text-secondary">From $799.00</span>
+</div>
+<div class="relative w-full h-48 rounded-lg overflow-hidden bg-primary-container mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A clean row of refurbished ultra-slim aluminum laptops with vivid OLED displays open, staged cleanly on a stainless steel technician bench under crisp white professional laboratory lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzHZeCeuhp_Bq5vcnuL55L3c7VsZU-8CuPcz81ePmLG5GDc8O1bHQ1zW4zzOoTwf6Bl-1WxlQEw44Vc2ypT8Vgj1B-TguOHn43JSR2xWDxdLpphF8pjgBPeFJocGSgKIWJmpD-2GYvzpUr1rNN6kKaOfCt67jDlUwOpBCmVfVmAIk2xqUXat84R5xR9u0popUqU_3tHDvm9U0eGljJSc-eYrSPDRiHX39rVXeTvG9-E144n-6SuJViLw"/>
+<span class="absolute top-2 left-2 bg-on-surface/80 backdrop-blur-sm text-surface-container-lowest text-label-caps font-label-caps px-2 py-0.5 rounded">100-POINT AUDIT</span>
+</div>
+<h3 class="text-headline-md font-headline-md font-bold text-on-surface mb-2">Certified Enterprise Laptops & Ultrabooks</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">Lenovo ThinkPad X1, Dell XPS & MacBook Pro units inspected, sanitized, repasted, and fitted with fresh OEM battery cells.</p>
+<!-- Checkmark feature list -->
+<div class="space-y-2 mb-6 text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface">Battery health verified above 92% capacity</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface">Brand-new Arctic MX-6 thermal compound applied</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface">Zero cosmetic blemish Grade-A chassis rating</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface">Includes full 1-Year ApexByte Direct Warranty</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-caps font-label-caps text-on-surface-variant">34 UNITS AVAILABLE</span>
+<button class="bg-secondary hover:bg-secondary-container text-on-primary px-4 py-2 rounded-lg text-body-sm font-semibold active:scale-[0.98] transition-all">
+                Browse Laptops
+              </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Maintenance & Repair Solutions Section -->
+<section class="py-16 bg-surface border-b border-outline-variant" id="repairs">
+<div class="w-full max-w-[1360px] mx-auto px-margin md:px-margin-lg">
+<div class="text-center max-w-3xl mx-auto mb-14">
+<span class="text-label-caps font-label-caps text-secondary font-bold uppercase tracking-wider block mb-2">PRECISION LAB SERVICES</span>
+<h2 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface font-bold tracking-tight mb-4">
+            Component-Level Engineering & Rapid Repair
+          </h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant">
+            We don't simply replace entire boards. Our certified bench technicians perform precision micro-soldering, trace reconstructions, and data extractions with cleanroom tooling.
+          </p>
+</div>
+<!-- 5 Key Service Pillars -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Pillar 1: Thermal Overhaul -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant hover:border-secondary transition-all shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined text-[28px]" data-icon="heat_pump">heat_pump</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Deep Thermal Overhaul</h3>
+<span class="font-code-metric text-label-caps text-secondary font-bold">DROP UP TO 20°C</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">
+              Ultrasonic dust evacuation, high-viscosity Arctic MX-6 repasting, and custom thermal pad replacement for throttled GPUs and gaming laptops.
+            </p>
+<div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant mb-4 text-code-metric text-body-sm">
+<div class="text-label-caps text-on-surface-variant font-bold mb-1">BENCH TELEMETRY:</div>
+<div class="flex justify-between items-center text-on-surface">
+<span>Avg. Core Temp:</span>
+<span class="text-secondary font-bold">89°C → 68°C Under Load</span>
+</div>
+</div>
+<a class="text-body-sm font-semibold text-secondary hover:underline inline-flex items-center gap-1" href="#diagnostic-card">
+              Book Thermal Flush <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Pillar 2: Micro-Soldering -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant hover:border-secondary transition-all shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined text-[28px]" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Motherboard Micro-Soldering</h3>
+<span class="font-code-metric text-label-caps text-secondary font-bold">MICROSCOPE LAB</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">
+              SMD capacitor replacement, burnt power rail reconstruction, BGA reballing, and blown VRM repair for hardware deemed 'unrepairable' by big-box stores.
+            </p>
+<div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant mb-4 text-code-metric text-body-sm">
+<div class="text-label-caps text-on-surface-variant font-bold mb-1">EQUIPMENT USED:</div>
+<div class="flex justify-between items-center text-on-surface">
+<span>Lab Tooling:</span>
+<span class="font-bold">Hakko Soldering & 45X Trinocular</span>
+</div>
+</div>
+<a class="text-body-sm font-semibold text-secondary hover:underline inline-flex items-center gap-1" href="#diagnostic-card">
+              Submit Board for Analysis <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Pillar 3: Cleanroom Data Recovery -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant hover:border-secondary transition-all shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined text-[28px]" data-icon="hard_drive_2">hard_drive_2</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Cleanroom Data Recovery</h3>
+<span class="font-code-metric text-label-caps text-secondary font-bold">94% SUCCESS RATE</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">
+              Class 100 cleanroom recovery for clicking hard drives, corrupted SSD controllers, damaged NAND flash, and failed corporate RAID arrays.
+            </p>
+<div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant mb-4 text-code-metric text-body-sm">
+<div class="text-label-caps text-on-surface-variant font-bold mb-1">INTEGRITY GUARANTEE:</div>
+<div class="flex justify-between items-center text-on-surface">
+<span>Policy:</span>
+<span class="text-secondary font-bold">No Data Recovered = Zero Fee</span>
+</div>
+</div>
+<a class="text-body-sm font-semibold text-secondary hover:underline inline-flex items-center gap-1" href="#diagnostic-card">
+              Start Emergency Recovery <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Pillar 4: OEM Screen & Battery -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant hover:border-secondary transition-all shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined text-[28px]" data-icon="screen_search_desktop">screen_search_desktop</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Same-Day Displays & Batteries</h3>
+<span class="font-code-metric text-label-caps text-secondary font-bold">OEM SOURCING</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">
+              Cracked Retina displays, flickering high-refresh panels, swollen lithium polymer batteries, and spill-damaged keyboards replaced in under 4 hours.
+            </p>
+<div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant mb-4 text-code-metric text-body-sm">
+<div class="text-label-caps text-on-surface-variant font-bold mb-1">INVENTORY STATUS:</div>
+<div class="flex justify-between items-center text-on-surface">
+<span>In-Stock Screens:</span>
+<span class="font-bold">Dell, Apple, Lenovo, ASUS</span>
+</div>
+</div>
+<a class="text-body-sm font-semibold text-secondary hover:underline inline-flex items-center gap-1" href="#diagnostic-card">
+              Get Instant Screen Quote <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Pillar 5 & 6 Span: Enterprise SLA -->
+<div class="lg:col-span-2 bg-primary-container text-surface-container-lowest p-6 rounded-xl border border-outline shadow-md flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="space-y-3">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container-highest/20 text-tertiary-fixed text-label-caps font-label-caps font-bold">
+<span class="material-symbols-outlined text-[16px]" data-icon="business">business</span>
+<span>B2B FLEET CONTRACTS</span>
+</div>
+<h3 class="text-headline-md font-headline-md font-bold text-surface-container-lowest">Annual Maintenance & Enterprise SLA Contracts</h3>
+<p class="text-body-md font-body-md text-surface-container-highest max-w-xl">
+                Dedicated hardware dispatch and monthly preventive bench maintenance for medical clinics, creative agencies, and engineering firms with strict uptime mandates.
+              </p>
+<div class="flex flex-wrap gap-4 text-body-sm font-code-metric pt-2">
+<span class="inline-flex items-center gap-1 text-tertiary-fixed">
+<span class="material-symbols-outlined text-[16px]" data-icon="check">check</span> 2-Hour SLA Response
+                </span>
+<span class="inline-flex items-center gap-1 text-tertiary-fixed">
+<span class="material-symbols-outlined text-[16px]" data-icon="check">check</span> On-Site Loaner Workstations
+                </span>
+<span class="inline-flex items-center gap-1 text-tertiary-fixed">
+<span class="material-symbols-outlined text-[16px]" data-icon="check">check</span> HIPAA & Data Compliance
+                </span>
+</div>
+</div>
+<a class="bg-secondary-container hover:bg-secondary text-on-primary px-6 py-3.5 rounded-lg text-body-md font-bold whitespace-nowrap active:scale-[0.98] transition-all" href="#contact">
+              Consult Enterprise Team
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 'Our 5-Step Repair Standard' Infographic Flow -->
+<section class="py-16 bg-surface-container-lowest border-b border-outline-variant">
+<div class="w-full max-w-[1360px] mx-auto px-margin md:px-margin-lg">
+<div class="text-center max-w-2xl mx-auto mb-14">
+<span class="text-label-caps font-label-caps text-secondary font-bold uppercase tracking-wider block mb-2">OPERATIONAL TRANSPARENCY</span>
+<h2 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface font-bold tracking-tight mb-2">
+            Our 5-Step Precision Bench Standard
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            From intake to final stress-testing, every machine is logged in our diagnostic ledger with complete hardware telemetry.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant flex flex-col justify-between relative">
+<div>
+<div class="w-9 h-9 rounded-full bg-secondary text-on-primary font-code-metric text-label-caps font-bold flex items-center justify-center mb-4">
+                01
+              </div>
+<h4 class="text-headline-sm font-headline-sm font-bold text-on-surface mb-2">32-Point Intake</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Free initial physical, optical, and electrical multimeter check at the service desk.
+              </p>
+</div>
+<span class="mt-4 text-label-caps font-label-caps text-secondary font-bold">100% FREE</span>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant flex flex-col justify-between relative">
+<div>
+<div class="w-9 h-9 rounded-full bg-secondary text-on-primary font-code-metric text-label-caps font-bold flex items-center justify-center mb-4">
+                02
+              </div>
+<h4 class="text-headline-sm font-headline-sm font-bold text-on-surface mb-2">Upfront Quote</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Direct itemized quote provided before a single screw is removed. Absolutely no surprise billing.
+              </p>
+</div>
+<span class="mt-4 text-label-caps font-label-caps text-on-surface font-bold">ZERO SURPRISES</span>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant flex flex-col justify-between relative">
+<div>
+<div class="w-9 h-9 rounded-full bg-secondary text-on-primary font-code-metric text-label-caps font-bold flex items-center justify-center mb-4">
+                03
+              </div>
+<h4 class="text-headline-sm font-headline-sm font-bold text-on-surface mb-2">Precision Repair</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Anti-static ESD grounding mats, calibrated torque drivers, and genuine OEM parts.
+              </p>
+</div>
+<span class="mt-4 text-label-caps font-label-caps text-secondary font-bold">ESD SECURE</span>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-low p-5 rounded-xl border border-outline-variant flex flex-col justify-between relative">
+<div>
+<div class="w-9 h-9 rounded-full bg-secondary text-on-primary font-code-metric text-label-caps font-bold flex items-center justify-center mb-4">
+                04
+              </div>
+<h4 class="text-headline-sm font-headline-sm font-bold text-on-surface mb-2">24h Stress Test</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Full-load bench test simulating thermals, memory consistency, and power stability.
+              </p>
+</div>
+<span class="mt-4 text-label-caps font-label-caps text-on-surface font-bold">AIDA64 / MEMTEST</span>
+</div>
+<!-- Step 5 -->
+<div class="bg-surface-container-low p-5 rounded-xl border border-secondary flex flex-col justify-between relative bg-secondary-fixed/20">
+<div>
+<div class="w-9 h-9 rounded-full bg-secondary text-on-primary font-code-metric text-label-caps font-bold flex items-center justify-center mb-4">
+                05
+              </div>
+<h4 class="text-headline-sm font-headline-sm font-bold text-on-surface mb-2">Safe Handover</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Comprehensive printed telemetry report accompanied by our 365-day warranty seal.
+              </p>
+</div>
+<span class="mt-4 text-label-caps font-label-caps text-secondary font-bold">1-YEAR GUARANTEE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer Reviews & Case Studies -->
+<section class="py-16 bg-surface-container-low border-b border-outline-variant" id="reviews">
+<div class="w-full max-w-[1360px] mx-auto px-margin md:px-margin-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span>
+<span class="font-code-metric text-label-caps text-secondary font-bold uppercase">VERIFIED SERVICE LOGS</span>
+</div>
+<h2 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface font-bold tracking-tight">
+              Customer Reviews & Bench Case Studies
+            </h2>
+</div>
+<div class="flex items-center gap-2 mt-4 md:mt-0 font-code-metric text-body-sm">
+<span class="text-amber-500 font-bold">★★★★★</span>
+<span class="text-on-surface font-bold">4.9 / 5.0 Rating</span>
+<span class="text-on-surface-variant">(Google & Trustpilot Verified)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Case Study 1: Gamer Custom Rig Revival -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary text-label-caps font-label-caps font-bold">GAMER CASE STUDY</span>
+<span class="text-amber-500 text-body-sm">★★★★★</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface mb-2">
+                "Saved my RTX 4090 when the manufacturer denied RMA"
+              </h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+                "My 4090 had a burnt 12VHPWR connector trace. Another shop told me to trash it. ApexByte rebuilt the power pins and replaced the fuse rails under their microscope. Runs at full clock speeds again at 62°C."
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-secondary">
+                ML
+              </div>
+<div>
+<div class="text-body-sm font-semibold text-on-surface">Marcus Leung</div>
+<div class="text-label-caps text-on-surface-variant font-code-metric">3D Animator & Sim Racer</div>
+</div>
+</div>
+</div>
+<!-- Case Study 2: Small Business RAID Server Revival -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface text-label-caps font-label-caps font-bold">ENTERPRISE RESCUE</span>
+<span class="text-amber-500 text-body-sm">★★★★★</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface mb-2">
+                "14TB accounting array restored in under 18 hours"
+              </h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+                "Our clinic's RAID 5 NAS lost two drives simultaneously before payroll. The ApexByte mobile team dispatched at 8 PM, rebuilt the controller logic in their cleanroom, and saved 100% of our clinical databases."
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-secondary">
+                DK
+              </div>
+<div>
+<div class="text-body-sm font-semibold text-on-surface">Dr. David Keller</div>
+<div class="text-label-caps text-on-surface-variant font-code-metric">Managing Partner, Horizon Dental</div>
+</div>
+</div>
+</div>
+<!-- Case Study 3: College Laptop Emergency -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary text-label-caps font-label-caps font-bold">SAME-DAY OVERHAUL</span>
+<span class="text-amber-500 text-body-sm">★★★★★</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface mb-2">
+                "Liquid spill clean & battery replacement before finals"
+              </h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+                "Coffee spilled directly across my MacBook keyboard. Took it to ApexByte with zero appointment. They ultrasonically cleaned the logic board to prevent corrosion and had it fully operational by lunch."
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-secondary">
+                SR
+              </div>
+<div>
+<div class="text-body-sm font-semibold text-on-surface">Samantha Ramirez</div>
+<div class="text-label-caps text-on-surface-variant font-code-metric">CS Student, State University</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location & Hours Section -->
+<section class="py-16 bg-surface border-b border-outline-variant" id="contact">
+<div class="w-full max-w-[1360px] mx-auto px-margin md:px-margin-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Workshop Details & Dispatch -->
+<div class="lg:col-span-6 space-y-6">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span>
+<span class="font-code-metric text-label-caps text-secondary font-bold uppercase">WALK-IN BENCH & MOBILE FLEET</span>
+</div>
+<h2 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface font-bold tracking-tight">
+                Visit the Systems Lab or Request Field Dispatch
+              </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">
+                Free dedicated customer parking directly in front of the workshop intake ramp. Rapid dispatch vans equipped with mobile solder stations for corporate calls.
+              </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container-lowest rounded-xl border border-outline-variant">
+<div class="flex items-center gap-2 text-secondary mb-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="pin_drop">pin_drop</span>
+<span class="font-bold text-body-md">Facility Address</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface">
+                  ApexByte Systems Lab<br/>
+                  842 Innovation Parkway, Suite 110<br/>
+                  Tech Corridor, CA 94016
+                </p>
+<span class="inline-block mt-2 text-label-caps text-secondary font-bold">RAMP ACCESS AVAILABLE</span>
+</div>
+<div class="p-4 bg-surface-container-lowest rounded-xl border border-outline-variant">
+<div class="flex items-center gap-2 text-secondary mb-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="schedule">schedule</span>
+<span class="font-bold text-body-md">Walk-In Bench Hours</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface space-y-0.5">
+<div class="flex justify-between"><span>Mon - Fri:</span> <span class="font-semibold">8:00 AM - 7:00 PM</span></div>
+<div class="flex justify-between"><span>Saturday:</span> <span class="font-semibold">9:00 AM - 5:00 PM</span></div>
+<div class="flex justify-between text-secondary font-medium"><span>Sunday:</span> <span>Emergency On-Call</span></div>
+</div>
+</div>
+</div>
+<!-- Direct Contact Actions -->
+<div class="p-4 bg-surface-container-low rounded-xl border border-outline-variant flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="support_agent">support_agent</span>
+</div>
+<div>
+<div class="text-body-sm font-bold text-on-surface">Direct Phone & WhatsApp Hotline</div>
+<div class="font-code-metric text-headline-sm font-bold text-secondary">(800) 555-BYTE</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<a class="px-4 py-2 bg-secondary text-on-primary text-body-sm font-semibold rounded-lg hover:bg-secondary-container active:scale-[0.98] transition-all" href="tel:8005552983">
+                  Call Lab Now
+                </a>
+<a class="px-4 py-2 bg-surface-container-lowest border border-outline-variant hover:border-secondary text-on-surface text-body-sm font-semibold rounded-lg active:scale-[0.98] transition-all" href="https://wa.me/">
+                  WhatsApp
+                </a>
+</div>
+</div>
+</div>
+<!-- Map Preview Graphic -->
+<div class="lg:col-span-6">
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-outline-variant shadow-lg relative overflow-hidden group">
+<div class="relative w-full h-[360px] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A clean technical map visualization of a silicon valley tech park, pinpointing an electronics engineering repair workshop with high-contrast road routes, clean blue navigation pins, and clear street labels." data-location="San Jose, California" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2aWDg0tl2rD-k9ZzXcyHcjTo1vZeG8zJhjlxo2UJdxvgSy7LwgRwF4JFa0G2tFYhVNfBHVFwwO75iJGxMrZ9auyQ38aykcgNK9i8msPCnFHdf_BDI6g4O565H5XEnjrR9-ax45zZa9qVjvlWfCaGkqjSsGpS1PSoFlp7MH8DAXk5dDHWgwkTI6vIU3KHupK-XdBwJzr9LCK5RvejTOkiKgrit0t_HOE9HH3UEtdm_Sg3w4Ahk91emBw"/>
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md p-3.5 rounded-lg border border-outline-variant shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]" data-icon="navigation">navigation</span>
+<div>
+<div class="text-body-sm font-bold text-on-surface">Field Van Current Status:</div>
+<div class="text-label-caps text-on-surface-variant font-code-metric">2 Dispatched • 1 Bench Technician Ready</div>
+</div>
+</div>
+<a class="bg-primary-container text-surface-container-lowest px-3 py-1.5 rounded text-body-sm font-semibold hover:bg-on-surface transition-colors" href="#diagnostic-card">
+                    Get Directions
+                  </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Shared Component: Footer -->
+<footer class="bg-primary-container dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline text-on-primary-container full-width">
+<div class="w-full max-w-[1360px] mx-auto px-margin md:px-margin-lg py-margin-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<!-- Brand Info -->
+<div class="space-y-4 md:col-span-1">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-surface-container-highest/20 flex items-center justify-center text-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]" data-icon="memory">memory</span>
+</div>
+<span class="text-headline-md font-headline-md font-bold text-on-primary-fixed dark:text-on-surface">ApexByte</span>
+</div>
+<p class="text-body-sm font-body-sm text-surface-container-highest">
+            Precision micro-soldering, data recovery lab, and high-performance custom computer engineering facility.
+          </p>
+<div class="font-code-metric text-label-caps text-tertiary-fixed">
+            FACILITY ID: APX-CA-9001
+          </div>
+</div>
+<!-- Quick Links -->
+<div class="space-y-3">
+<h4 class="text-headline-sm font-headline-sm font-semibold text-surface-container-lowest dark:text-on-surface">Services</h4>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors duration-150 hover:underline" href="#repairs">Thermal Overhaul</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors duration-150 hover:underline" href="#repairs">Motherboard Micro-Soldering</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors duration-150 hover:underline" href="#repairs">Cleanroom Data Recovery</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors duration-150 hover:underline" href="#repairs">Display & Power Replacements</a></li>
+</ul>
+</div>
+<!-- Hardware Depot -->
+<div class="space-y-3">
+<h4 class="text-headline-sm font-headline-sm font-semibold text-surface-container-lowest dark:text-on-surface">Hardware Sales</h4>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors duration-150 hover:underline" href="#sales">Custom Liquid-Cooled Rigs</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors duration-150 hover:underline" href="#sales">Silent Studio Workstations</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors duration-150 hover:underline" href="#sales">Grade-A Refurbished Laptops</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors duration-150 hover:underline" href="#sales">Component Sourcing</a></li>
+</ul>
+</div>
+<!-- Compliance & SLA Links -->
+<div class="space-y-3">
+<h4 class="text-headline-sm font-headline-sm font-semibold text-surface-container-lowest dark:text-on-surface">Governance & SLA</h4>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors duration-150 hover:underline" href="#">Warranty Policy</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors duration-150 hover:underline" href="#">Diagnostic Standards</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors duration-150 hover:underline" href="#">Enterprise SLA</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors duration-150 hover:underline" href="#">Component Sourcing</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors duration-150 hover:underline" href="#">Privacy Policy</a></li>
+<li><a class="text-on-primary-container dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors duration-150 hover:underline" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-outline flex flex-col md:flex-row items-center justify-between text-body-sm font-body-sm text-surface-container-highest gap-4">
+<div>
+          © 2025 ApexByte Systems & IT Solutions. Certified CompTIA A+ & ISO 9001 Facility. All Rights Reserved.
+        </div>
+<div class="flex items-center gap-6 font-code-metric text-label-caps">
+<span class="text-tertiary-fixed">ISO 9001:2015 REGISTERED</span>
+<span>ESD CLASS 0 PROTOCOL</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Interactive script for quick diagnostic selectors -->
+<script>
+    function selectOption(button, group) {
+      const parent = button.parentElement;
+      const buttons = parent.querySelectorAll('button');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('active-opt', 'border-secondary', 'bg-surface-container-low');
+        btn.classList.add('border-outline-variant');
+      });
+
+      button.classList.add('active-opt', 'border-secondary', 'bg-surface-container-low');
+      button.classList.remove('border-outline-variant');
+    }
+  </script>
+</body></html>
